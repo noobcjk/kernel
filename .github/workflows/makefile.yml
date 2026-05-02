@@ -16,7 +16,7 @@ jobs:
         with:
           kernel-url: https://github.com/snowwolf725/android_kernel_oneplus_sm8150.git
           kernel-branch: oneplus/LOS_SM8150_14.0
-          config: /vendor/sm8120_defconfig
+          config: /vendor/sm8150_defconfig
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
