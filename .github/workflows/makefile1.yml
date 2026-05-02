@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-kernel:
+    name: Oneplus7T kernelsu内核集成测试
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Build
+        uses: dabao1955/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/LineageOS/android_kernel_oneplus_sm8150.git
+          kernel-branch: lineage-23.2
+          config: /vendor/sm8150_defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          ksu: true
+          ksu-version: 9.5.0
+          android-version: 12
+          aosp-clang-version: r383902
+          anykernel3: true
+          release: true
+          access-token: ${{ secrets.GITHUB_TOKEN }}
