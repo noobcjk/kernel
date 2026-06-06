@@ -22,7 +22,7 @@ jobs:
           aosp-clang: true
           android-version: 12
           aosp-clang-version: r383902
-          CLANG_TRIPLE := aarch64-linux-android-
           anykernel3: true
           release: true
+          clang-triple: aarch64-linux-android
           access-token: ${{ secrets.GITHUB_TOKEN }}
